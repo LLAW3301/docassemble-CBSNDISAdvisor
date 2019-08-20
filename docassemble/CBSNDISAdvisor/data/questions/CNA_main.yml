@@ -1,0 +1,48 @@
+# This is the main file for your application.
+# This file should contain the mandatory blocks
+# as well as other data that defines your application
+---
+# Include other parts of this interview as a list of files in this block
+include:
+  - CNA_file1_etc.yml
+---
+# If we use objects we will declare them here.  Every application has
+# an 'endpoint' object.  You may use other objects depending on your
+# application's needs
+objects:
+  - endpoint: DADict
+---
+# Metadata about the app.  This isn't displayed anywhere but is useful
+# as a record.
+metadata:
+  title: CBS Inc NDIS Advisor
+  authors:
+    - name: Name 1
+    - name: Name 2
+    - name: Name 3
+  organisation:  Flinders University
+---
+# Welcome screen should go here
+mandatory: True
+question: Welcome Screen Title
+subquestion: |
+  Welcome Screen text
+  
+  ***Disclaimer:***  
+  
+  *Don't forget to add a disclaimer here*
+  
+  Would you like to continue?
+buttons:
+  - "Continue": continue
+  - "Exit": exit
+---
+#
+# Mandatory code block that drives the interview
+mandatory: True
+code: |
+  if some_tests:
+    endpoint['ineligible']
+  else:
+    endpoint['eligible']
+---    
