@@ -1,0 +1,10 @@
+---
+event: endpoint['ineligible']
+question: Eligibility requirements not met
+subquestion:
+  You are not eligible.
+buttons:
+  - Exit: exit
+    url: https://communitybridgingservices.org.au/
+  - Restart: restart
+---
