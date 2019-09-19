@@ -1,31 +1,31 @@
 ---
-question: Residency
+question: Do you live in Australia?
 fields:  
-  - Do you live in Australia?: STGaustralianresident
+  - no label: STGaustralianresident
     datatype: radio
     choices:
       - Yes
       - No
 ---
-question: Residency
+question: Are you an Australian citizen?
 fields:
-  - Are you an Australian citizen?: STGcitizen
+  - no label: STGcitizen
     datatype: radio
     choices:
       - Yes
       - No
 ---
-question: Residency
+question: Are you a permanent Visa holder?
 fields:
-  - Are you a permanent Visa holder?: STGpermanentvisa
+  - no label: STGpermanentvisa
     datatype: radio
     choices:
       - Yes
       - No
 ---
-question: Residency
+question: Are you a protected special category Visa holder?
 fields:
-  - Are you a protected special category Visa holder?: STGspecialvisa
+  - no label: STGspecialvisa
     datatype: radio
     choices:
       - Yes

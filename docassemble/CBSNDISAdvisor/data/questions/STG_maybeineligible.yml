@@ -1,0 +1,10 @@
+---
+event: endpoint['maybeineligible']
+question: May not be eligible.
+subquestion:
+  You may not be eligible. But what do we know, we are just uni students.
+buttons:
+  - Exit: exit
+    url: https://communitybridgingservices.org.au/
+  - Restart: restart
+---
