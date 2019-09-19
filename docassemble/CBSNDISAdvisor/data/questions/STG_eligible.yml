@@ -1,0 +1,10 @@
+---
+event: endpoint['eligible']
+question: Result of main program
+subquestion: |
+  You are eligible.
+buttons:
+  - Exit: exit
+    url: https://communitybridgingservices.org.au/
+  - Restart: restart
+---
