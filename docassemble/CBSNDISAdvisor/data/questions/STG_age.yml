@@ -1,7 +1,7 @@
 ---
-question: Age
+question: What is your age?
 fields:
-  - What is your age?: STGage
+  - no label: STGage
     datatype: integer
 ---
 code: |

@@ -6,8 +6,10 @@
 include:
   - STG_age.yml
   - STG_residency.yml
+  - STG_diagnosedautism.yml
   - STG_eligible.yml
   - STG_ineligible.yml
+  - STG_maybeineligible.yml
 ---
 # If we use objects we will declare them here.  Every application has
 # an 'endpoint' object.  You may use other objects depending on your
@@ -42,6 +44,8 @@ subquestion: |
   The purpose of this questionnaire is to determine whether you are eligible
   for the National Disability Insurance Scheme. 
   
+  **This application only applies for people with autism.**
+  
     ***Disclaimer***  
   
     This application and its outcomes do not constitute legal advice.
@@ -61,8 +65,8 @@ buttons:
 # Mandatory code block that drives the interview
 mandatory: True
 code: |
-  if STGage_ok and STGresidency:
+  if STGage_ok and STGresidency and STGdiagnosedautism:
     endpoint['eligible']
   else:
-    endpoint['ineligible']
----    
+    endpoint['maybeineligible']
+---
