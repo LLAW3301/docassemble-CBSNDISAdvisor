@@ -1,0 +1,43 @@
+---
+question: Residency
+fields:  
+  - Do you live in Australia?: STGaustralianresident
+    datatype: radio
+    choices:
+      - Yes
+      - No
+---
+question: Residency
+fields:
+  - Are you an Australian citizen?: STGcitizen
+    datatype: radio
+    choices:
+      - Yes
+      - No
+---
+question: Residency
+fields:
+  - Are you a permanent Visa holder?: STGpermanentvisa
+    datatype: radio
+    choices:
+      - Yes
+      - No
+---
+question: Residency
+fields:
+  - Are you a protected special category Visa holder?: STGspecialvisa
+    datatype: radio
+    choices:
+      - Yes
+      - No
+---
+code: |
+  if STGaustralianresident and STGcitizen == 'Yes':
+    STGresidency = True
+  elif STGaustralianresident and STGpermanentvisa == 'Yes':
+    STGresidency = True
+  elif STGaustralianresident and STGspecialvisa == 'Yes':
+    STGresidency = True
+  else:
+    STGresidency = False
+---

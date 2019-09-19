@@ -1,0 +1,68 @@
+# This is the main file for your application.
+# This file should contain the mandatory blocks
+# as well as other data that defines your application
+---
+# Include other parts of this interview as a list of files in this block
+include:
+  - STG_age.yml
+  - STG_residency.yml
+  - STG_eligible.yml
+  - STG_ineligible.yml
+---
+# If we use objects we will declare them here.  Every application has
+# an 'endpoint' object.  You may use other objects depending on your
+# application's needs
+objects:
+  - endpoint: DADict
+---
+# Metadata about the app.  This isn't displayed anywhere but is useful
+# as a record.
+metadata:
+  title: CBS Inc NDIS Advisor
+  authors:
+    - name: Taylor Moore
+    - name: Shimron Lobo
+    - name: Grace Hensel
+  organisation:  Flinders University
+---
+image sets:
+  freepik:
+    attribution: |
+    images:
+      cbs: cbs.jpg
+---
+# Welcome screen should go here
+decoration: cbs
+mandatory: True
+question: |
+  NDIS Advisor App
+subquestion: |
+  **Welcome to our NDIS Eligibility Questionnaire**
+  
+  The purpose of this questionnaire is to determine whether you are eligible
+  for the National Disability Insurance Scheme. 
+  
+    ***Disclaimer***  
+  
+    This application and its outcomes do not constitute legal advice.
+  
+    This application does not guarantee a successful outcome for the NDIS, rather
+    it aims to help you self-assess your eligibility for the NDIS.
+    
+    **The NDIA will make the final decision.**
+
+  If you continue, you accept these terms.
+buttons:
+  - I accept: continue
+  - Exit: exit
+    url: https://communitybridgingservices.org.au
+---
+#
+# Mandatory code block that drives the interview
+mandatory: True
+code: |
+  if STGage_ok and STGresidency:
+    endpoint['eligible']
+  else:
+    endpoint['ineligible']
+---    
