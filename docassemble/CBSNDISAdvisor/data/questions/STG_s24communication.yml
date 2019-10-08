@@ -1,0 +1,34 @@
+---
+question: |
+  Do you have trouble talking to other people?
+fields:
+  - no label: STGcommunication
+    datatype: yesnoradio
+---
+question: |
+  Do you need someone else to talk to other people
+  for you?
+fields:
+  - no label: STGcommunication
+    datatype: yesnoradio
+---
+question: |
+  Do you have trouble understanding what other people
+  are saying to you?
+fields:
+  - no label: STGcommunication
+    datatype: yesnoradio
+---
+question: |
+  Do you have trouble with writing?
+fields:
+  - no label: STGcommunication
+    datatype: yesnoradio
+---
+question: |
+  Do you have trouble getting your point across
+  to people?
+fields:
+  - no label: STGcommunication
+    datatype: yesnoradio
+---

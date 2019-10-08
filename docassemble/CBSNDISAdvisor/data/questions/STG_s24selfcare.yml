@@ -1,0 +1,43 @@
+---
+question: |
+  Do you usually or always require assistance with
+  showering?
+fields:
+  - no label: STGselfcare
+    datatype: yesnoradio
+---
+question: |
+  Do you usually or always require assistance with
+  eating?
+fields:
+  - no label: STGselfcare
+    datatype: yesnoradio
+---
+question: |
+  Do you usually or always require assistance with
+  dressing yourself?
+fields:
+  - no label: STGselfcare
+    datatype: yesnoradio
+---
+question: |
+  Do you usually or always require assistance with
+  toileting?
+fields:
+  - no label: STGselfcare
+    datatype: yesnoradio
+---
+question: |
+  Do you usually or always require assistance with
+  cleaning your teeth?
+fields:
+  - no label: STGselfcare
+    datatype: yesnoradio
+---
+question: |
+  Do you usually or always require assistance with
+  looking after your own health care needs?
+fields:
+  - no label: STGselfcare
+    datatype: yesnoradio
+---

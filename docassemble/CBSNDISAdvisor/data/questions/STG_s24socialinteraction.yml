@@ -1,0 +1,27 @@
+---
+question: |
+  Do you have trouble making or keeping friends?
+fields:
+  - no label: STGsocialinteraction
+    datatype: yesnoradio
+---
+question: |
+  Do you have trouble playing with other children?
+fields:
+  - no label: STGsocialinteraction
+    datatype: yesnoradio
+---
+question: |
+  Do you have trouble behaving within limits accepted
+  by others?
+fields:
+  - no label: STGsocialinteraction
+    datatype: yesnoradio
+---
+question: |
+  Do you have trouble coping with feelings and emotions
+  in a social context?
+fields:
+  - no label: STGsocialinteraction
+    datatype: yesnoradio
+---

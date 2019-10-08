@@ -1,0 +1,19 @@
+---
+question: |
+  Do you have difficulty participating in sport?
+fields:
+  - no label: STGsocialparticipation
+    datatype: yesnoradio
+---
+question: |
+  Do you have difficulty in performing voluntary work or travel?
+fields:
+  - no label: STGsocialparticipation
+    datatype: yesnoradio
+---
+question: |
+  Do you have trouble engaging in social activities (e.g. going to the movies)?
+fields:
+  - no label: STGsocialparticipation
+    datatype: yesnoradio
+---
