@@ -1,0 +1,20 @@
+---
+question: |
+  Do you have trouble learning and remembering
+  information?
+fields:
+  - no label: STGlearning
+    datatype: yesnoradio
+---
+question: |
+  Do you find it hard to learn new things/skills?
+fields:
+  - no label: STGlearning
+    datatype: yesnoradio
+---
+question: |
+  Do you have trouble using new skills?
+fields:
+  - no label: STGlearning
+    datatype: yesnoradio
+---

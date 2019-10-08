@@ -1,0 +1,15 @@
+---
+question: |
+  Do you need to use any of the following to get around:
+  wheelchair, walking stick, mobility scooter or walker?
+fields:
+  - no label: STGmobility
+    datatype: yesnoradio
+---
+question: |
+  Do you have trouble getting in or out of a bed 
+  or a chair?
+fields:
+  - no label: STGmobility
+    datatype: yesnoradio
+---

@@ -1,0 +1,25 @@
+---
+question: |
+  Do you have a job?
+fields:
+  - no label: STGeconomicparticipation
+    datatype: yesnoradio
+---
+question: |
+  Have you tried to get a job?
+fields:
+  - no label: STGeconomicparticipation
+    datatype: yesnoradio
+---
+question: |
+  Are you able to get a job?
+fields:
+  - no label: STGeconomicparticipation
+    datatype: yesnoradio
+---
+question: |
+  Have you tried to get a job but not been able to?
+fields:
+  - no label: STGeconomicparticipation
+    datatype: yesnoradio
+---

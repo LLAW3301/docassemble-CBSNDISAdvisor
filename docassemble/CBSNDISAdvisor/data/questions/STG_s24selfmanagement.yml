@@ -1,0 +1,25 @@
+---
+question: |
+  Do you have difficulty completing daily tasks?
+fields:
+  - no label: STGselfmanagement
+    datatype: yesnoradio
+---
+question: |
+  Do you have difficulty making decisions?
+fields:
+  - no label: STGselfmanagement
+    datatype: yesnoradio
+---
+question: |
+  Do you have difficulty problem solving?
+fields:
+  - no label: STGselfmanagement
+    datatype: yesnoradio
+---
+question: |
+  Do you have difficulty managing finances?
+fields:
+  - no label: STGselfmanagement
+    datatype: yesnoradio
+---

@@ -7,6 +7,15 @@ include:
   - STG_age.yml
   - STG_residency.yml
   - STG_diagnosedautism.yml
+  - STG_s24communication.yml
+  - STG_s24selfcare.yml
+  - STG_s24learning.yml
+  - STG_s24mobility.yml
+  - STG_s24socialinteraction.yml
+  - STG_s24selfmanagement.yml
+  - STG_s24socialparticipation.yml
+  - STG_s24economicparticipation.yml
+  - STG_s24lifetimesupport.yml
   - STG_eligible.yml
   - STG_ineligible.yml
   - STG_maybeineligible.yml
@@ -69,4 +78,3 @@ code: |
     endpoint['eligible']
   else:
     endpoint['maybeineligible']
----
