@@ -1,25 +1,23 @@
 ---
-question: |
-  Do you have difficulty completing daily tasks?
+question: Please tick all that apply on your worst day
 fields:
   - no label: STGselfmanagement
-    datatype: yesnoradio
+    datatype: checkboxes
+    choices:
+      - Have difficulty completing daily tasks.
+      - Have difficulty making decisions.
+      - Have difficulty problem solving.
+      - Have difficulty managing finances.
 ---
-question: |
-  Do you have difficulty making decisions?
-fields:
-  - no label: STGselfmanagement
-    datatype: yesnoradio
+code: |
+  if STGselfmanagement:
+    STGselfmanagement = True
+  else:
+    STGselfmanagement = False
 ---
-question: |
-  Do you have difficulty problem solving?
-fields:
-  - no label: STGselfmanagement
-    datatype: yesnoradio
----
-question: |
-  Do you have difficulty managing finances?
-fields:
-  - no label: STGselfmanagement
-    datatype: yesnoradio
+code: |
+  if STGselfmanagement.any_true():
+    STGselfmanagement_checkboxes = True
+  else:
+    STGselfmanagement_checkboxes = False
 ---

@@ -1,15 +1,21 @@
 ---
-question: |
-  Do you need to use any of the following to get around:
-  wheelchair, walking stick, mobility scooter or walker?
+question: Please tick all that apply on your worst day
 fields:
   - no label: STGmobility
-    datatype: yesnoradio
+    datatype: checkboxes
+    choices:
+      - Need to use any of the following to get around (e.g. wheelchair, walking stick, mobility scooter or walker).
+      - Have trouble getting in or out of a bed or a chair.
 ---
-question: |
-  Do you have trouble getting in or out of a bed 
-  or a chair?
-fields:
-  - no label: STGmobility
-    datatype: yesnoradio
+code: |
+  if STGmobility:
+    STGmobility = True
+  else:
+    STGmobility = False
+---
+code: |
+  if STGmobility.any_true():
+    STGmobility_checkboxes = True
+  else:
+    STGmobility_checkboxes = False
 ---

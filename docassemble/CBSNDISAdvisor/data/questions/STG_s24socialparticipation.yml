@@ -1,19 +1,22 @@
 ---
-question: |
-  Do you have difficulty participating in sport?
+question: Please tick all that apply
 fields:
   - no label: STGsocialparticipation
-    datatype: yesnoradio
+    datatype: checkboxes
+    choices:
+      - You have difficulty participating in sport.
+      - You have difficulty in performing voluntary work or travel.
+      - You have trouble engaging in social activities.
 ---
-question: |
-  Do you have difficulty in performing voluntary work or travel?
-fields:
-  - no label: STGsocialparticipation
-    datatype: yesnoradio
+code: |
+  if STGsocialparticipation:
+    STGsocialparticipation = True
+  else:
+    STGsocialparticipation = False
 ---
-question: |
-  Do you have trouble engaging in social activities (e.g. going to the movies)?
-fields:
-  - no label: STGsocialparticipation
-    datatype: yesnoradio
+code: |
+  if STGsocialparticipation.any_true():
+    STGsocialparticipation_checkboxes = True
+  else:
+    STGsocialparticipation_checkboxes = False
 ---
