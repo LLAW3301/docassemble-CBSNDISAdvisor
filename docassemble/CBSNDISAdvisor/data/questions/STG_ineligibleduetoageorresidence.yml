@@ -1,0 +1,22 @@
+---
+event: endpoint['ineligibleduetoageorresidence']
+question: Eligibility requirements not met
+subquestion: |
+
+  **Unfortunately, you are *not* eligible for the NDIS.**
+  
+  
+  
+  To access the NDIS, you must be between 7 and 65 years old. You must also live
+  in Australia and be either an Australian citizen or holder of a protected or
+  special category Visa.
+  
+  
+  
+  **Based on what you told us, you do not meet one of these requirements, therefore
+  you are unable to access the NDIS.**
+buttons:
+  - Exit: exit
+    url: https://communitybridgingservices.org.au/
+  - Restart: restart
+---

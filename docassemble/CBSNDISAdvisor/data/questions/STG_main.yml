@@ -1,0 +1,92 @@
+# This is the main file for your application.
+# This file should contain the mandatory blocks
+# as well as other data that defines your application
+---
+# Include other parts of this interview as a list of files in this block
+include:
+  - STG_age.yml
+  - STG_residency.yml
+  - STG_diagnosedautism.yml
+  - STG_potentialautism.yml
+  - STG_s24communication.yml
+  - STG_s24socialinteraction.yml
+  - STG_s24learning.yml
+  - STG_s24mobility.yml
+  - STG_s24selfmanagement.yml
+  - STG_s24selfcare.yml
+  - STG_s24socialparticipation.yml
+  - STG_s24economicparticipation.yml
+  - STG_eligibleduetoautismdiagnosis.yml
+  - STG_noautism.yml
+  - STG_likelyeligibleduetoautismfactors.yml
+  - STG_ineligibleduetoageorresidence.yml
+  - STG_ineligibleduetofailuretosatisfydisabilityrequirements.yml
+---
+# If we use objects we will declare them here.  Every application has
+# an 'endpoint' object.  You may use other objects depending on your
+# application's needs
+objects:
+  - endpoint: DADict
+---
+# Metadata about the app.  This isn't displayed anywhere but is useful
+# as a record.
+metadata:
+  title: CBS Inc NDIS Advisor
+  authors:
+    - name: Taylor Moore
+    - name: Shimron Lobo
+    - name: Grace Hensel
+  organisation:  Flinders University
+---
+image sets:
+  freepik:
+    attribution: |
+    images:
+      cbs: cbs.jpg
+---
+# Welcome screen should go here
+decoration: cbs
+mandatory: True
+question: |
+  NDIS Advisor App
+subquestion: |
+  **Welcome to our NDIS Eligibility Questionnaire**
+  
+  The purpose of this questionnaire is to determine whether you are eligible
+  for the National Disability Insurance Scheme. 
+  
+  **This application only applies for people with autism.**
+  
+    ***Disclaimer***  
+  
+    This application and its outcomes do not constitute legal advice.
+  
+    This application does not guarantee a successful outcome for the NDIS, rather
+    it aims to help you self-assess your eligibility for the NDIS.
+    
+    **The NDIA will make the final decision.**
+    
+    *If you are under 18, you must have a parent or caregiver present while filling
+    out this questionnaire.*
+
+  If you continue, you accept these terms.
+buttons:
+  - I accept: continue
+  - Exit: exit
+    url: https://communitybridgingservices.org.au
+---
+#
+# Mandatory code block that drives the interview
+mandatory: True
+code: |
+  if ( STGage_ok == False ) or ( STGresidency == False ):
+    endpoint['ineligibleduetoageorresidence']
+  elif STGdiagnosedautism and STGmedicalexpertselected:
+    endpoint['eligibleduetoautismdiagnosis']
+  elif ( STGpotentialautism_ok and 
+       (STGcommunication_checkboxes or STGlearning_checkboxes or STGmobility_checkboxes or STGsocialinteraction_checkboxes or STGselfcare_checkboxes or STGselfmanagement_checkboxes) and 
+       (STGsocialparticipation_checkboxes or STGeconomicparticipation_checkboxes)):
+    endpoint['likelyeligibleduetoautismfactors']
+  else:
+    endpoint['ineligibleduetofailuretosatisfydisabilityrequirements']
+---

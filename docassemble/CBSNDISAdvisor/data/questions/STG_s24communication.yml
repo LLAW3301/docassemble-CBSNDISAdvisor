@@ -1,0 +1,24 @@
+---
+question: Please tick all that apply on your worst day
+fields:
+  - no label: STGcommunication
+    datatype: checkboxes
+    choices:
+      - Have trouble talking to other people.
+      - Need someone else to talk to other people.
+      - Have trouble understanding what other people are saying to you.
+      - Have trouble with writing.
+      - Have trouble getting your point across to people.
+---
+code: |
+  if STGcommunication:
+    STGcommunication = True
+  else:
+    STGcommunciation = False
+---
+code: |
+  if STGcommunication.any_true():
+    STGcommunication_checkboxes = True
+  else:
+    STGcommunication_checkboxes = False
+---

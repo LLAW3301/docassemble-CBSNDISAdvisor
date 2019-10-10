@@ -1,0 +1,28 @@
+---
+question: Have you been diagnosed with autism?
+fields:
+  - no label: STGdiagnosedautism
+    datatype: yesnomaybe
+---
+question: Who diagnosed you?
+fields:
+  - no label: STGmedicalexpert
+    datatype: checkboxes
+    choices:
+      - Clinical Psychologist
+      - Psychiatrist
+      - Paediatrician
+      - Specialisit multi-disciplinary team
+---
+code: |
+  if STGdiagnosedautism and STGmedicalexpertselected:
+    STGdiagnosedautism = True
+  else:
+    STGdiagnosedautism = False
+---
+code: |
+  if STGmedicalexpert.any_true():
+    STGmedicalexpertselected = True
+  else:
+    STGmedicalexpertselected = False
+---

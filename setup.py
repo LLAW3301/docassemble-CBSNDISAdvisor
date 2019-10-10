@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 from fnmatch import fnmatchcase
 from distutils.util import convert_path
 
-standard_exclude = ('*.py', '*.pyc', '*~', '.*', '*.bak', '*.swp*')
+standard_exclude = ('*.pyc', '*~', '.*', '*.bak', '*.swp*')
 standard_exclude_directories = ('.*', 'CVS', '_darcs', './build', './dist', 'EGG-INFO', '*.egg-info')
 def find_package_data(where='.', package='', exclude=standard_exclude, exclude_directories=standard_exclude_directories):
     out = {}
@@ -50,7 +50,7 @@ setup(name='docassemble.CBSNDISAdvisor',
       author='TBC',
       author_email='TBC',
       license='The MIT License (MIT)',
-      url='https://docassemble.org',
+      url='https://github.com/LLAW3301/docassemble-CBSNDISAdvisor',
       packages=find_packages(),
       namespace_packages=['docassemble'],
       install_requires=[],

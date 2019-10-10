@@ -1,0 +1,7 @@
+---
+question: |
+  Are you likely to require support for the rest of your life?
+fields:
+  - no label: STGlifetimesupport
+    datatype: yesnoradio
+---

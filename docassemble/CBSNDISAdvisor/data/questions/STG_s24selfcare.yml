@@ -1,0 +1,25 @@
+---
+question: Please tick all that apply on your worst day
+fields:
+  - no label: STGselfcare
+    datatype: checkboxes
+    choices:
+      - Usually or always require assistance with showering.
+      - Usually or always require assistance with eating.
+      - Usually or always require assistance with dressing yourself.
+      - Usually or always require assistance with toileting.
+      - Usually or always require assistance with cleaning your teeth.
+      - Usually or always require assistance with looking after your own healthcare needs.
+---
+code: |
+  if STGselfcare:
+    STGselfcare = True
+  else:
+    STGselfcare = False
+---
+code: |
+  if STGselfcare.any_true():
+    STGselfcare_checkboxes = True
+  else:
+    STGselfcare_checkboxes = False
+---

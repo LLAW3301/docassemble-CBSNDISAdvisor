@@ -1,0 +1,12 @@
+---
+question: What is your age?
+fields:
+  - no label: STGage
+    datatype: integer
+---
+code: |
+  if 7 <= STGage < 65:
+    STGage_ok = True
+  else:
+    STGage_ok = False
+---

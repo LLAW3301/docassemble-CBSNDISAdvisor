@@ -1,0 +1,23 @@
+---
+question: Please tick all that apply on your worst day
+fields:
+  - no label: STGselfmanagement
+    datatype: checkboxes
+    choices:
+      - Have difficulty completing daily tasks.
+      - Have difficulty making decisions.
+      - Have difficulty problem solving.
+      - Have difficulty managing finances.
+---
+code: |
+  if STGselfmanagement:
+    STGselfmanagement = True
+  else:
+    STGselfmanagement = False
+---
+code: |
+  if STGselfmanagement.any_true():
+    STGselfmanagement_checkboxes = True
+  else:
+    STGselfmanagement_checkboxes = False
+---
