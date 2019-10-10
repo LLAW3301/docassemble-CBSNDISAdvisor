@@ -1,20 +1,22 @@
 ---
-question: |
-  Do you have trouble learning and remembering
-  information?
+question: Please tick all that apply on your worst day
 fields:
   - no label: STGlearning
-    datatype: yesnoradio
+    datatype: checkboxes
+    choices:
+      - Have trouble learning and remembering information.
+      - Find it hard to learn new things/skills.
+      - Have trouble using new skills.
 ---
-question: |
-  Do you find it hard to learn new things/skills?
-fields:
-  - no label: STGlearning
-    datatype: yesnoradio
+code: |
+  if STGlearning:
+    STGlearning = True
+  else:
+    STGlearning = False
 ---
-question: |
-  Do you have trouble using new skills?
-fields:
-  - no label: STGlearning
-    datatype: yesnoradio
+code: |
+  if STGlearning.any_true():
+    STGlearning_checkboxes = True
+  else:
+    STGlearning_checkboxes = False
 ---

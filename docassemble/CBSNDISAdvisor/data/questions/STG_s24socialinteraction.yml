@@ -1,27 +1,23 @@
 ---
-question: |
-  Do you have trouble making or keeping friends?
+question: Please tick all that apply on your worst day
 fields:
   - no label: STGsocialinteraction
-    datatype: yesnoradio
+    datatype: checkboxes
+    choices:
+      - Have trouble making or keeping friends.
+      - Trouble playing with other children.
+      - Have trouble behaving within limits accepted by others.
+      - Have trouble coping with feelings and emotions in a social context.
 ---
-question: |
-  Do you have trouble playing with other children?
-fields:
-  - no label: STGsocialinteraction
-    datatype: yesnoradio
+code: |
+  if STGsocialinteraction:
+    STGsocialinteraction = True
+  else:
+    STGsocialinteraction = False
 ---
-question: |
-  Do you have trouble behaving within limits accepted
-  by others?
-fields:
-  - no label: STGsocialinteraction
-    datatype: yesnoradio
----
-question: |
-  Do you have trouble coping with feelings and emotions
-  in a social context?
-fields:
-  - no label: STGsocialinteraction
-    datatype: yesnoradio
+code: |
+  if STGsocialinteraction.any_true():
+    STGsocialinteraction_checkboxes = True
+  else:
+    STGsocialinteraction_checkboxes = False
 ---

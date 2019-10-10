@@ -1,25 +1,23 @@
 ---
-question: |
-  Do you have a job?
+question: Please tick all that apply
 fields:
   - no label: STGeconomicparticipation
-    datatype: yesnoradio
+    datatype: checkboxes
+    choices:
+      - You have a job.
+      - You have tried to get a job.
+      - You are able to get a job.
+      - You have tried to get a job but not been able to.
 ---
-question: |
-  Have you tried to get a job?
-fields:
-  - no label: STGeconomicparticipation
-    datatype: yesnoradio
+code: |
+  if STGeconomicparticipation:
+    STGeconomicparticipation = True
+  else:
+    STGeconomicparticipation = False
 ---
-question: |
-  Are you able to get a job?
-fields:
-  - no label: STGeconomicparticipation
-    datatype: yesnoradio
----
-question: |
-  Have you tried to get a job but not been able to?
-fields:
-  - no label: STGeconomicparticipation
-    datatype: yesnoradio
+code: |
+  if STGeconomicparticipation.any_true():
+    STGeconomicparticipation_checkboxes = True
+  else:
+    STGeconomicparticipation_checkboxes = False
 ---

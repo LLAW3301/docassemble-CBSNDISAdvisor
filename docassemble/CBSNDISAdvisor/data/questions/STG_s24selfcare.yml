@@ -1,43 +1,25 @@
 ---
-question: |
-  Do you usually or always require assistance with
-  showering?
+question: Please tick all that apply on your worst day
 fields:
   - no label: STGselfcare
-    datatype: yesnoradio
+    datatype: checkboxes
+    choices:
+      - Usually or always require assistance with showering.
+      - Usually or always require assistance with eating.
+      - Usually or always require assistance with dressing yourself.
+      - Usually or always require assistance with toileting.
+      - Usually or always require assistance with cleaning your teeth.
+      - Usually or always require assistance with looking after your own healthcare needs.
 ---
-question: |
-  Do you usually or always require assistance with
-  eating?
-fields:
-  - no label: STGselfcare
-    datatype: yesnoradio
+code: |
+  if STGselfcare:
+    STGselfcare = True
+  else:
+    STGselfcare = False
 ---
-question: |
-  Do you usually or always require assistance with
-  dressing yourself?
-fields:
-  - no label: STGselfcare
-    datatype: yesnoradio
----
-question: |
-  Do you usually or always require assistance with
-  toileting?
-fields:
-  - no label: STGselfcare
-    datatype: yesnoradio
----
-question: |
-  Do you usually or always require assistance with
-  cleaning your teeth?
-fields:
-  - no label: STGselfcare
-    datatype: yesnoradio
----
-question: |
-  Do you usually or always require assistance with
-  looking after your own health care needs?
-fields:
-  - no label: STGselfcare
-    datatype: yesnoradio
+code: |
+  if STGselfcare.any_true():
+    STGselfcare_checkboxes = True
+  else:
+    STGselfcare_checkboxes = False
 ---

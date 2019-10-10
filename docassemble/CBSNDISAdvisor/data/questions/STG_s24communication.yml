@@ -1,34 +1,24 @@
 ---
-question: |
-  Do you have trouble talking to other people?
+question: Please tick all that apply on your worst day
 fields:
   - no label: STGcommunication
-    datatype: yesnoradio
+    datatype: checkboxes
+    choices:
+      - Have trouble talking to other people.
+      - Need someone else to talk to other people.
+      - Have trouble understanding what other people are saying to you.
+      - Have trouble with writing.
+      - Have trouble getting your point across to people.
 ---
-question: |
-  Do you need someone else to talk to other people
-  for you?
-fields:
-  - no label: STGcommunication
-    datatype: yesnoradio
+code: |
+  if STGcommunication:
+    STGcommunication = True
+  else:
+    STGcommunciation = False
 ---
-question: |
-  Do you have trouble understanding what other people
-  are saying to you?
-fields:
-  - no label: STGcommunication
-    datatype: yesnoradio
----
-question: |
-  Do you have trouble with writing?
-fields:
-  - no label: STGcommunication
-    datatype: yesnoradio
----
-question: |
-  Do you have trouble getting your point across
-  to people?
-fields:
-  - no label: STGcommunication
-    datatype: yesnoradio
+code: |
+  if STGcommunication.any_true():
+    STGcommunication_checkboxes = True
+  else:
+    STGcommunication_checkboxes = False
 ---

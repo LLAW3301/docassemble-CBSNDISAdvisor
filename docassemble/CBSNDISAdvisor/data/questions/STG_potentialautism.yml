@@ -1,0 +1,12 @@
+---
+question: Do you think you have autism?
+fields:
+  - no label: STGpotentialautism
+    datatype: yesnoradio
+---
+code: |
+  if STGpotentialautism:
+    STGpotentialautism_ok = True
+  else:
+    STGpotentialautism_ok = False
+---
