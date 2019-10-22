@@ -1,5 +1,5 @@
 ---
-question: Please tick all that apply on your worst day
+question: Please tick all that apply. You...
 fields:
   - no label: STGlearning
     datatype: checkboxes
