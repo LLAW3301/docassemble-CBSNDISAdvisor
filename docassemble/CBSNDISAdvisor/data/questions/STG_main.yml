@@ -31,7 +31,8 @@ objects:
 # Metadata about the app.  This isn't displayed anywhere but is useful
 # as a record.
 metadata:
-  title: CBS Inc NDIS Advisor
+  title: |
+    CBS Inc NDIS Advisor
   authors:
     - name: Taylor Moore
     - name: Grace Hensel
@@ -63,6 +64,8 @@ subquestion: |
   
     This application does not guarantee a successful outcome for the NDIS, rather
     it aims to help you self-assess your eligibility for the NDIS.
+    
+    We require that you answer all questions honestly for the most accurate result.
     
     **The NDIA will make the final decision.**
     
