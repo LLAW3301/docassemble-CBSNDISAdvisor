@@ -8,7 +8,6 @@ include:
   - STG_residency.yml
   - STG_diagnosedautism.yml
   - STG_potentialautism.yml
-  - STG_levelofautism.yml
   - STG_s24communication.yml
   - STG_s24socialinteraction.yml
   - STG_s24learning.yml
@@ -16,12 +15,11 @@ include:
   - STG_s24selfmanagement.yml
   - STG_s24selfcare.yml
   - STG_s24socialandeconomicparticipation.yml
-  - STG_eligibleduetoautismdiagnosis.yml
   - STG_noautism.yml
-  - STG_answers.yml
-  - STG_ineligibleduetoageorresidence.yml
-  - STG_ineligibleduetofailuretosatisfydisabilityrequirements.yml
-  - STG_likelyeligibleduetoautismfactors.yml
+  - STG_ineligible.yml
+  - STG_ineligibleduetoresidency.yml
+  - STG_eligible.yml
+  - STG_ineligibleduetoage.yml
 ---
 # If we use objects we will declare them here.  Every application has
 # an 'endpoint' object.  You may use other objects depending on your
@@ -58,7 +56,7 @@ subquestion: |
   for the National Disability Insurance Scheme (NDIS) and to give you tips for the
   next steps in applying.
   
-  **This questionnaire only applies for people with autism spectrum disorder.**
+  **This questionnaire currently only applies for people with autism spectrum disorder.**
   
     ***Disclaimer***  
   
@@ -72,7 +70,7 @@ subquestion: |
     
     **The NDIA will make the final decision.**
     
-    *We advise you have a support person while filling out the questionnaire.*
+    *We advise you to have a support person while filling out the questionnaire.*
 
   If you continue, you accept these terms.
 buttons:
@@ -84,12 +82,15 @@ buttons:
 # Mandatory code block that drives the interview
 mandatory: True
 code: |
-  if ( STGage_ok == False ) or ( STGresidency == False ):
-    endpoint['ineligibleduetoageorresidence']
-  elif ( STGdiagnosedautism and STGmedicalexpert and STGlevelofautism and STGpotentialautism_ok and 
-       (STGcommunication_checkboxes or STGlearning_checkboxes or STGmobility_checkboxes or STGsocialinteraction_checkboxes or STGselfcare_checkboxes or STGselfmanagement_checkboxes) and 
+  if ( STGage_ok == False ):
+    endpoint['ineligibleduetoage']
+  elif ( STGresidency == False ):
+    endpoint['ineligibleduetoresidency']
+  elif ( STGpotentialautism_ok == False ):
+    endpoint['noautism']
+  elif (( STGdiagnosedautism or STGcommunication_checkboxes or STGlearning_checkboxes or STGmobility_checkboxes or STGsocialinteraction_checkboxes or STGselfcare_checkboxes or STGselfmanagement_checkboxes) and 
        (STGsocialandeconomicparticipation_checkboxes)):
-    endpoint['answers']
+    endpoint['eligible']
   else:
-    endpoint['ineligibleduetofailuretosatisfydisabilityrequirements']
+    endpoint['ineligible']
 ---

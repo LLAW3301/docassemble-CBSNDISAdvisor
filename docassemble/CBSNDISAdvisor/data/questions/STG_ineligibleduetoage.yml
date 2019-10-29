@@ -1,6 +1,6 @@
 ---
-event: endpoint['noautism']
-question: Sorry, the NDIS is only for people with autism.
+event: endpoint['ineligibleduetoage']
+question: not old enough buddy
 subquestion: |
   ** Based on what you have told us, you do not have
   autism.**

@@ -1,10 +1,33 @@
 ---
 event: endpoint['eligible']
-question: Result of main program
+question: Your answers
 subquestion: |
-  You are eligible.
-buttons:
-  - Exit: exit
-    url: https://communitybridgingservices.org.au/
-  - Restart: restart
+  Thank you for answering the questions. 
+  
+  Below is a list of the answers you have given for each series of questions.
+  
+  Category|Your Answers
+  --------|--------
+  Diagnosed?        | ${ STGdiagnosedautism }
+  Level of Autism   | ${ STGlevelofautism }
+  Medical Expert    | ${ STGmedicalexpert.true_values() if STGmedicalexpert.true_values() else 'Not Answered' }
+  Communication     | ${ STGcommunication.true_values() if STGcommunication.true_values() else 'Not Answered' }
+  Social Interaction | ${ STGsocialinteraction.true_values() if STGsocialinteraction.true_values() else 'Not Answered' }
+  Learning          | ${ STGlearning.true_values() if STGlearning.true_values() else 'Not Answered' }
+  Mobility          | ${ STGmobility.true_values() if STGmobility.true_values() else 'Not Answered' }
+  Self-Care         | ${ STGselfcare.true_values() if STGselfcare.true_values() else 'Not Answered' }
+  Self-Management   | ${ STGselfmanagement.true_values() if STGselfmanagement.true_values() else 'Not Answered' }
+  Social and Economic Participation   | ${ STGsocialandeconomicparticipation.true_values() if STGsocialandeconomicparticipation.true_values() else 'Not Answered' }
+  
+attachment:
+  - name: Your Answers
+    filename: Your Answers
+    docx template file: Consolidated_answers_document.docx
+    valid formats:
+      - pdf
+  - name: Next Steps and Planner Meeting Tips
+    filename: Next Steps and Planner Meeting Tips
+    docx template file: Next_Steps_and_Planner_Meeting_Tips.docx
+    valid formats:
+      - pdf
 ---
