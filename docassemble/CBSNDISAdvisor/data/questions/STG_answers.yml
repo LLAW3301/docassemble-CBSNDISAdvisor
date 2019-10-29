@@ -1,0 +1,56 @@
+---
+event: endpoint['answers']
+question: Your answers
+subquestion: |
+  Thank you for answering the questions. 
+  
+  Below is a list of the answers you have given for each series of questions.
+  
+  Category|Your Answers
+  --------|--------
+  Diagnosed?        | ${ STGdiagnosedautism.true_values() }
+  Level of Autism   | ${ STGlevelofautism.true_values() }
+  Medical Expert    | ${ STGmedicalexpert.true_values() }
+  Communication     | ${ STGcommunication.true_values() }
+  Social Interaction | ${ STGsocialinteraction.true_values() }
+  Learning          | ${ STGlearning.true_values() }
+  Mobility          | ${ STGmobility.true_values() if STGmobility.true_values() else 'Not Answered' }
+  Self-Care         | ${ STGselfcare.true_values() }
+  Self-Management   | ${ STGselfmanagement.true_values() }
+  Social and Economic Participation   | ${ STGsocialandeconomicparticipation.true_values() }
+  
+  Category|Your Answers
+  --------|--------
+  % for STGcategory in STGtablecategories:
+    %if STGtablevalues[loop.index]:
+  ${ STGcategory } | ${ STGtablevalues[loop.index] }
+    %endif
+  %endfor
+  
+attachment:
+  - name: Your Answers and Next Steps
+    filename: Your Answers and Next Steps
+    docx template file: Consolidated_answers_document.docx
+    valid formats:
+      - pdf
+  - name: Your Answers and Next Steps2
+    filename: Your Answers and Next Steps2
+    docx template file: Consolidated_answers_document.docx
+    valid formats:
+      - docx
+---
+code: |
+  STGtablecategories = [
+    'Diagnosed', 
+    'Level of Autism', 
+    'Medical Expert']
+---
+code: |
+  STGtablevalues = [
+    STGdiagnosedautism.true_values(),
+    STGlevelofautism.true_values(),
+    STGmedicalexpert.true_values() ]
+---
+    
+  
+  

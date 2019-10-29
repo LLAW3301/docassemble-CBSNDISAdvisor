@@ -1,11 +1,12 @@
 ---
-question: Please tick all that apply. You...
+question: Please tick all that apply.
 fields:
-  - no label: STGmobility
+  - I usually or always...: STGmobility
     datatype: checkboxes
     choices:
-      - Need to use any of the following to get around (e.g. wheelchair, walking stick, mobility scooter or walker).
-      - Have trouble getting in or out of a bed or a chair.
+      - Need to use any of the following to get around - wheelchair, walking stick, mobility scooter or walker
+      - Have trouble getting in or out of a bed or a chair
+      - Have trouble performing tasks that require the use of limbs
 ---
 code: |
   if STGmobility:

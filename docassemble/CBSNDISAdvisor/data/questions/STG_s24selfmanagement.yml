@@ -1,21 +1,13 @@
 ---
-question: Please tick all that apply...
-subquestion: |
-  These questions are designed to assess your disability in regard to
-  self-management.
-  
-  It is important to answer these questions as if your disability was at its worst.
-  
-  If no answers apply, please select 'None of the above'.
-  
+question: Please tick all that apply.  
 fields:
-  - Please tick all that apply. : STGselfmanagement
+  - I usually or always...: STGselfmanagement
     datatype: checkboxes
     choices:
-      - I have difficulty completing daily tasks.
-      - I have difficulty making decisions.
-      - I difficulty problem solving.
-      - I difficulty managing finances.
+      - Have difficulty completing daily tasks
+      - Have difficulty making decisions
+      - Have difficulty problem solving
+      - Have difficulty managing finances
 ---
 code: |
   if STGselfmanagement:

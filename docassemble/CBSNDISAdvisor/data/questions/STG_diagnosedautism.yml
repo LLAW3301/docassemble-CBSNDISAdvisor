@@ -1,8 +1,10 @@
 ---
-question: Have you been diagnosed with autism?
+question: Have you been diagnosed with autism spectrum disorder?
 fields:
   - no label: STGdiagnosedautism
-    datatype: yesnomaybe
+    datatype: yesnoradio
+  - who diagnosed you?
+    show if: STGdiagnosedautism
 ---
 question: Who diagnosed you?
 fields:

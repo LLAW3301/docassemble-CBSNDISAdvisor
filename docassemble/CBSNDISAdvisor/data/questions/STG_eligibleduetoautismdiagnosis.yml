@@ -3,7 +3,8 @@ event: endpoint['eligibleduetoautismdiagnosis']
 question: You are likely eligible
 subquestion: |
   
-  **It is likely you are eligible for the NDIS due to your autism diagnosis.**
+  **It is likely you are eligible for the NDIS due to your autism
+  spectrum disorder diagnosis.**
   
   You should now apply for the NDIS in order to receive assistance.
   

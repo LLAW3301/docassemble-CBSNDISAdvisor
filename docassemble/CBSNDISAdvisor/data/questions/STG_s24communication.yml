@@ -1,14 +1,13 @@
 ---
-question: Please tick all that apply. You...
+question: Please tick all that apply. 
 fields:
-  - no label: STGcommunication
+  - I usually or always...: STGcommunication
     datatype: checkboxes
     choices:
-      - Have trouble talking to other people.
-      - Need someone else to talk to other people.
-      - Have trouble understanding what other people are saying to you.
-      - Have trouble with writing.
-      - Have trouble getting your point across to people.
+      - Have difficulty expressing what I need or want by gesture or speech
+      - Need help from someone else to talk to other people for me
+      - Have trouble understanding what other people are saying to me
+      - Have trouble getting my point across to people
 ---
 code: |
   if STGcommunication:

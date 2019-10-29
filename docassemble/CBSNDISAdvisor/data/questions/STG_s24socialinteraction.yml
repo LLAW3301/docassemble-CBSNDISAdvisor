@@ -1,13 +1,12 @@
 ---
-question: Please tick all that apply on your worst day
+question: Please tick all that apply.
 fields:
-  - no label: STGsocialinteraction
+  - I usually or always...: STGsocialinteraction
     datatype: checkboxes
     choices:
-      - Have trouble making or keeping friends.
-      - Trouble playing with other children.
-      - Have trouble behaving within limits accepted by others.
-      - Have trouble coping with feelings and emotions in a social context.
+      - Have trouble making or keeping friends
+      - Have trouble behaving within limits accepted by others
+      - Have trouble coping with feelings and emotions in a social context
 ---
 code: |
   if STGsocialinteraction:
