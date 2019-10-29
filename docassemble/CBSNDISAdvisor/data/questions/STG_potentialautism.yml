@@ -1,5 +1,7 @@
 ---
-question: Do you think you have autism?
+question: |
+  Are you looking for support from the NDIS because you believe you have autism
+  spectrum disorder?
 fields:
   - no label: STGpotentialautism
     datatype: yesnoradio

@@ -1,0 +1,10 @@
+---
+question: What level of autism have you been diagnosed with?
+fields:
+  - no label: STGlevelofautism
+    datatype: checkboxes
+    choices:
+      - Level 1
+      - Level 2
+      - Level 3
+---

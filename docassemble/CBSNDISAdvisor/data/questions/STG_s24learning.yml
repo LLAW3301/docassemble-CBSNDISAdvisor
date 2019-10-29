@@ -1,12 +1,12 @@
 ---
-question: Please tick all that apply. You...
+question: Please tick all that apply.
 fields:
-  - no label: STGlearning
+  - I usually or always...: STGlearning
     datatype: checkboxes
     choices:
-      - Have trouble learning and remembering information.
-      - Find it hard to learn new things/skills.
-      - Have trouble using new skills.
+      - Have trouble learning and remembering information
+      - Find it hard to learn new things/skills
+      - Have trouble using new skills
 ---
 code: |
   if STGlearning:

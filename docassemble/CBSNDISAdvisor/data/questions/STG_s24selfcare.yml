@@ -1,15 +1,15 @@
 ---
-question: Please tick all that apply. You...
+question: Please tick all that apply.
 fields:
-  - no label: STGselfcare
+  - I usually or always...: STGselfcare
     datatype: checkboxes
     choices:
-      - Usually or always need assistance with showering.
-      - Usually or always need assistance with eating.
-      - Usually or always need assistance with dressing yourself.
-      - Usually or always need assistance with toileting.
-      - Usually or always need assistance with cleaning your teeth.
-      - Usually or always need assistance with looking after your own healthcare needs.
+      - Need help with showering
+      - Need help with eating
+      - Need help with dressing yourself
+      - Need help with toileting
+      - Need help with cleaning your teeth
+      - Need help with looking after your own healthcare needs
 ---
 code: |
   if STGselfcare:
