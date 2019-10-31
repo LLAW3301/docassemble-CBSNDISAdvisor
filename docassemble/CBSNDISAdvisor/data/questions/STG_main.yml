@@ -38,17 +38,18 @@ metadata:
     - name: Shimron Lobo
   organisation:  Flinders University
 ---
-image sets:
-  freepik:
-    attribution: |
-    images:
-      cbs: cbs.jpg
+objects:
+  - CBSLogo: DAStaticFile.using(filename='CBS-logo-small-white.png')
+---
+features:
+  css: CBSInc.css
+  debug: True
+  hide standard menu: False
 ---
 # Welcome screen should go here
-decoration: cbs
 mandatory: True
 question: |
-  NDIS Advisor App
+  NDIS Advisor Questionnaire
 subquestion: |
   Welcome to our NDIS Eligibility Questionnaire!
   

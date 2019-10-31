@@ -1,15 +1,24 @@
 ---
 event: endpoint['ineligibleduetoage']
-question: not old enough buddy
+question: Unfortunately, you may not be eligible for the NDIS.
 subquestion: |
-  ** Based on what you have told us, you do not have
-  autism.**
- 
-  If you have another disability and want to check if you
-  are eligible then you should contact the National Disability
-  Insurance Agency (NDIA) and make an Access Request with them.
-  You can make this request by calling the NDIA on 1800 800 119.
-  Find out more about apply for the NDIS here.
+  
+  To access the NDIS, you must be between 7 and 65 years old.
+  
+  You have indicated that you are **${ STGage }** years old. 
+  
+  According to **section 22** of the [*National Disability Insurance Scheme Act 2013* (Cth)](https://www.legislation.gov.au/Details/C2013A00020)
+  your answers indicate that you do not meet this requirement.
+  
+  **This means you may not be eligible to access the NDIS.**
+  
+  The National Disability Insurance Agency (NDIA) makes the final decision
+  about who gets to receive support under the NDIS. They might think that 
+  you are eligible to get support. If you would like to contact them to discuss 
+  your eligibility you can do this by calling them on 1800 800 119.
+  
+  Thank you for using the NDIS Advisor.
+  
 buttons:
   - Exit: exit
     url: https://communitybridgingservices.org.au/

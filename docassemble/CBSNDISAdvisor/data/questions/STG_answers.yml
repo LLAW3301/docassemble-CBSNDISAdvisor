@@ -1,6 +1,6 @@
 ---
 event: endpoint['answers']
-question: Your answers
+question: Your Answers and Next Steps
 subquestion: |
   Thank you for answering the questions. 
   
