@@ -1,8 +1,14 @@
 ---
 event: endpoint['eligible']
-question: Your answers
+question: It is likely you are eligible for the NDIS.
 subquestion: |
-  Thank you for answering the questions. 
+  Thank you for answering our questions.
+  
+  From what you have told us, you have a level of autism spectrum disorder
+  that might mean you can get support under the NDIS. 
+  
+  According to the [*National Disability Insurance Scheme Act 2013* (Cth)](https://www.legislation.gov.au/Details/C2013A00020)
+  your level of impairment may mean you are eligible.
   
   Below is a list of the answers you have given for each series of questions.
   
@@ -19,13 +25,23 @@ subquestion: |
   Self-Management   | ${ STGselfmanagement.true_values() if STGselfmanagement.true_values() else 'Not Answered' }
   Social and Economic Participation   | ${ STGsocialandeconomicparticipation.true_values() if STGsocialandeconomicparticipation.true_values() else 'Not Answered' }
   
+  You can apply to the National Disability Insurance Agency (NDIA) in order to get
+  support. You can do this by calling the NDIA on 1800 800 119.
+  
+  Please keep in mind that the NDIA makes the final decision about who gets to
+  receive support under the NDIS. The NDIA may not think you are eligible, and you
+  should be prepared for this.
+  
+  **Download the 'Next Steps and Planning Meeting Tips' document for more information
+  on how to apply for the NDIS or [click here for more information](https://www.ndis.gov.au/applying-access-ndis/how-apply).**
+  
 attachment:
   - name: Your Answers
     filename: Your Answers
     docx template file: Consolidated_answers_document.docx
     valid formats:
       - pdf
-  - name: Next Steps and Planner Meeting Tips
+  - name: Next Steps and Planning Meeting Tips
     filename: Next Steps and Planner Meeting Tips
     docx template file: Next_Steps_and_Planner_Meeting_Tips.docx
     valid formats:

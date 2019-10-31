@@ -20,14 +20,8 @@ fields:
     show if: STGdiagnosedautism
 ---
 code: |
-  if STGdiagnosedautism and STGmedicalexpertselected and STGlevelofautism:
+  if STGdiagnosedautism and STGmedicalexpert and STGlevelofautism:
     STGdiagnosedautism = True
   else:
     STGdiagnosedautism = False
----
-code: |
-  if STGmedicalexpert.any_true():
-    STGmedicalexpertselected = True
-  else:
-    STGmedicalexpertselected = False
 ---

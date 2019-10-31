@@ -1,15 +1,15 @@
 ---
 event: endpoint['noautism']
-question: Sorry, the NDIS is only for people with autism.
+question: Sorry, the NDIS Advisor is currently only for people with autism spectrum disorder.
 subquestion: |
-  ** Based on what you have told us, you do not have
-  autism.**
+  ** Your answers indicate that you are not seeking funding from the NDIS for 
+  autism spectrum disorder.**
  
-  If you have another disability and want to check if you
-  are eligible then you should contact the National Disability
-  Insurance Agency (NDIA) and make an Access Request with them.
-  You can make this request by calling the NDIA on 1800 800 119.
-  Find out more about apply for the NDIS here.
+  If you have a different disability and would like to check if you 
+  are eligible then you should contact the National Disability Insurance Agency 
+  (NDIA) and make an Access Request with them. You can make this request 
+  by calling the NDIA on 1800 800 119. 
+  
 buttons:
   - Exit: exit
     url: https://communitybridgingservices.org.au/
