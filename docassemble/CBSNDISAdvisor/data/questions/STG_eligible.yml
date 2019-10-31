@@ -7,8 +7,20 @@ subquestion: |
   From what you have told us, you have a level of autism spectrum disorder
   that might mean you can get support under the NDIS. 
   
-  According to the [*National Disability Insurance Scheme Act 2013* (Cth)](https://www.legislation.gov.au/Details/C2013A00020)
+  To be eligible for the NDIS your autism spectrum disorder **must** cause you a 
+  very high level of difficulty in *one* of the following areas:
+    
+    - Communication
+    - Social interaction
+    - Learning
+    - Mobility
+    - Self-care
+    - Self-management
+  
+  According to **section 24** the [*National Disability Insurance Scheme Act 2013* (Cth)](https://www.legislation.gov.au/Details/C2013A00020)
   your level of impairment may mean you are eligible.
+  
+  **This means you may not be eligible to access the NDIS.**
   
   Below is a list of the answers you have given for each series of questions.
   
@@ -48,4 +60,9 @@ attachment:
     docx template file: Next_Steps_and_Planning_Meeting_Tips.docx
     valid formats:
       - pdf
+
+buttons:
+  - Exit: exit
+    url: https://communitybridgingservices.org.au/
+  - Restart: restart
 ---

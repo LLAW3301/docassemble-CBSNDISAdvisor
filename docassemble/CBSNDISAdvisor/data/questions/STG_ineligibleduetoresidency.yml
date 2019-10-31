@@ -16,7 +16,8 @@ subquestion: |
     - Are you a permanent visa holder? **${ STGpermanentvisa }**
     - Are you a special category visa holder? **${ STGspecialvisa }**
   
-  According to **section 23** of the [*National Disability Insurance Scheme Act 2013* (Cth)](https://www.legislation.gov.au/Details/C2013A00020) your answers indicate that you do not meet this requirement.
+  According to **section 23** of the [*National Disability Insurance Scheme Act 2013* (Cth)](https://www.legislation.gov.au/Details/C2013A00020) 
+  your answers indicate that you do not meet this requirement.
   
   **This means you may not be eligible to access the NDIS.**
   
