@@ -1,5 +1,7 @@
 ---
-question: Please tick all that apply.
+question: Please tick all that apply. 
+subquestion: |
+  This section of the questionnaire will ask you about self-care.
 fields:
   - I usually or always...: STGselfcare
     datatype: checkboxes
