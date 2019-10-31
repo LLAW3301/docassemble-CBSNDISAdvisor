@@ -1,20 +1,55 @@
 ---
-mandatory: True
 event: endpoint['ineligible']
-question: Eligibility requirements not met
-subquestion:
-  Unfortunately, you are **not** eligible for the NDIS. 
+question: Unfortunately, you may not be eligible for the NDIS.
+subquestion: |
+
+  To be eligible for the NDIS your autism spectrum disorder **must** cause you a 
+  very high level of difficulty in *one* of the following areas:
+    
+    - Communication
+    - Social interaction
+    - Learning
+    - Mobility
+    - Self-care
+    - Self-management
+    
+  Your answers are below:
   
+  Category|Your Answers
+  --------|--------
+  Diagnosed?        | ${ STGdiagnosedautism }
+  %if STGdiagnosedautism:
+  Level of Autism   | ${ STGlevelofautism }
+  Medical Expert    | ${ STGmedicalexpert.true_values() if STGmedicalexpert.true_values() else 'Not Answered' }
+  %endif
+  Communication     | ${ STGcommunication.true_values() if STGcommunication.true_values() else 'Not Answered' }
+  Social Interaction | ${ STGsocialinteraction.true_values() if STGsocialinteraction.true_values() else 'Not Answered' }
+  Learning          | ${ STGlearning.true_values() if STGlearning.true_values() else 'Not Answered' }
+  Mobility          | ${ STGmobility.true_values() if STGmobility.true_values() else 'Not Answered' }
+  Self-Care         | ${ STGselfcare.true_values() if STGselfcare.true_values() else 'Not Answered' }
+  Self-Management   | ${ STGselfmanagement.true_values() if STGselfmanagement.true_values() else 'Not Answered' }
   
+  Your autism spectrum disorder **must** also cause you a very high level 
+  of impairment in either economic or social participation.
   
-  To access the NDIS, you must be between 7 and 65 years old. You must also live
-  in Australia and be either an Australian citizen or holder of a protected or
-  special category Visa.
+  Your answers are below:
   
+  Category|Your Answers
+  --------|--------
+  Social and Economic Participation   | ${ STGsocialandeconomicparticipation.true_values() if STGsocialandeconomicparticipation.true_values() else 'Not Answered' }
   
+  According to **section 24** of the [*National Disability Insurance Scheme Act 2013* (Cth)](https://www.legislation.gov.au/Details/C2013A00020)
+  your answers indicate that you do not meet these requirements.
   
-  You do not meet one of these requirements, therefore you are unable to access
-  the NDIS.
+  **This means you may not be eligible to access the NDIS.**
+  
+  The National Disability Insurance Agency (NDIA) makes the final decision
+  about who gets to receive support under the NDIS. If you would still like to 
+  check if you are eligible you should contact them to discuss your eligibility. 
+  You can do this by calling them on 1800 800 119.
+  
+  Thank you for using the NDIS Advisor.
+  
 buttons:
   - Exit: exit
     url: https://communitybridgingservices.org.au/

@@ -14,13 +14,12 @@ include:
   - STG_s24mobility.yml
   - STG_s24selfmanagement.yml
   - STG_s24selfcare.yml
-  - STG_s24socialparticipation.yml
-  - STG_s24economicparticipation.yml
-  - STG_eligibleduetoautismdiagnosis.yml
+  - STG_s24socialandeconomicparticipation.yml
   - STG_noautism.yml
-  - STG_likelyeligibleduetoautismfactors.yml
-  - STG_ineligibleduetoageorresidence.yml
-  - STG_ineligibleduetofailuretosatisfydisabilityrequirements.yml
+  - STG_ineligible.yml
+  - STG_ineligibleduetoresidency.yml
+  - STG_eligible.yml
+  - STG_ineligibleduetoage.yml
 ---
 # If we use objects we will declare them here.  Every application has
 # an 'endpoint' object.  You may use other objects depending on your
@@ -31,47 +30,70 @@ objects:
 # Metadata about the app.  This isn't displayed anywhere but is useful
 # as a record.
 metadata:
-  title: CBS Inc NDIS Advisor
+  title: |
+    CBS Inc NDIS Advisor
   authors:
     - name: Taylor Moore
     - name: Grace Hensel
     - name: Shimron Lobo
   organisation:  Flinders University
 ---
-image sets:
-  freepik:
-    attribution: |
-    images:
-      cbs: cbs.jpg
+objects:
+  - CBSLogo: DAStaticFile.using(filename='CBS-logo-small-white.png')
+---
+mandatory: True
+code: |
+  STGmetadata = all_variables(special='metadata')
+  
+  STGlogostring = '<div class="media"><img src="'
+  
+  STGlogostring += CBSLogo.url_for()
+ 
+  STGlogostring += '" class="mr-3" height="80">'
+  STGlogostring += '<div class="media-body">'
+  STGlogostring += '<h5 class="mt-0">&nbsp; <b>' + STGmetadata['title'] + '</b></h5>'
+  STGlogostring += '</div></div>'
+  
+  set_parts(logo=STGlogostring)
+---
+features:
+  css: CBSInc.css
+  debug: false
+  hide standard menu: false
 ---
 # Welcome screen should go here
-decoration: cbs
 mandatory: True
 question: |
-  NDIS Advisor App
+  CBS Inc. NDIS Advisor
 subquestion: |
-  **Welcome to our NDIS Eligibility Questionnaire**
+  Welcome to our NDIS Advisor!
   
-  The purpose of this questionnaire is to determine whether you are eligible
-  for the National Disability Insurance Scheme. 
+  The purpose of this application is to decide whether you are likely eligible
+  for the National Disability Insurance Scheme (NDIS) and to give you tips for the
+  next steps in applying.
   
-  **This application only applies for people with autism.**
+  **This application currently only applies for people with autism spectrum disorder.**
   
     ***Disclaimer***  
   
-    This application and its outcomes do not constitute legal advice.
+    This application is **not** legal advice. 
   
-    This application does not guarantee a successful outcome for the NDIS, rather
-    it aims to help you self-assess your eligibility for the NDIS.
+    Please answer all questions honestly.
+    
+    This application does not guarantee you will receive funding from the NDIS. 
+    It will help you assess whether you are likely eligible and give you tips
+    on the next steps.
     
     **The NDIA will make the final decision.**
     
-    *If you are under 18, you must have a parent or caregiver present while filling
-    out this questionnaire.*
+    *We advise you to have a support person while filling out the questions.*
+    
+    *If you are under 18, you must have a parent or caregiver present while
+    filling out the questions.*
 
   If you continue, you accept these terms.
 buttons:
-  - I accept: continue
+  - Continue: continue
   - Exit: exit
     url: https://communitybridgingservices.org.au
 ---
@@ -79,14 +101,15 @@ buttons:
 # Mandatory code block that drives the interview
 mandatory: True
 code: |
-  if ( STGage_ok == False ) or ( STGresidency == False ):
-    endpoint['ineligibleduetoageorresidence']
-  elif STGdiagnosedautism and STGmedicalexpertselected:
-    endpoint['eligibleduetoautismdiagnosis']
-  elif ( STGpotentialautism_ok and 
-       (STGcommunication_checkboxes or STGlearning_checkboxes or STGmobility_checkboxes or STGsocialinteraction_checkboxes or STGselfcare_checkboxes or STGselfmanagement_checkboxes) and 
-       (STGsocialparticipation_checkboxes or STGeconomicparticipation_checkboxes)):
-    endpoint['likelyeligibleduetoautismfactors']
+  if ( STGage_ok == False ):
+    endpoint['ineligibleduetoage']
+  elif ( STGresidency == False ):
+    endpoint['ineligibleduetoresidency']
+  elif ( STGpotentialautism_ok == False ):
+    endpoint['noautism']
+  elif (( STGdiagnosedautism or STGcommunication_checkboxes or STGlearning_checkboxes or STGmobility_checkboxes or STGsocialinteraction_checkboxes or STGselfcare_checkboxes or STGselfmanagement_checkboxes) and 
+       (STGsocialandeconomicparticipation_checkboxes)):
+    endpoint['eligible']
   else:
-    endpoint['ineligibleduetofailuretosatisfydisabilityrequirements']
+    endpoint['ineligible']
 ---

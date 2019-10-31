@@ -1,28 +1,27 @@
 ---
-question: Have you been diagnosed with autism?
+question: Have you been diagnosed with autism spectrum disorder?
 fields:
   - no label: STGdiagnosedautism
-    datatype: yesnomaybe
----
-question: Who diagnosed you?
-fields:
-  - no label: STGmedicalexpert
+    datatype: yesnoradio
+  - Who diagnosed you?: STGmedicalexpert
     datatype: checkboxes
     choices:
       - Clinical Psychologist
       - Psychiatrist
       - Paediatrician
-      - Specialisit multi-disciplinary team
+      - Specialist multi-disciplinary team
+    show if: STGdiagnosedautism
+  - What level of autism spectrum disorder have you been diagnosed with?: STGlevelofautism
+    datatype: radio
+    choices:
+      - Level 1
+      - Level 2
+      - Level 3
+    show if: STGdiagnosedautism
 ---
 code: |
-  if STGdiagnosedautism and STGmedicalexpertselected:
+  if STGdiagnosedautism and STGmedicalexpert and STGlevelofautism:
     STGdiagnosedautism = True
   else:
     STGdiagnosedautism = False
----
-code: |
-  if STGmedicalexpert.any_true():
-    STGmedicalexpertselected = True
-  else:
-    STGmedicalexpertselected = False
 ---

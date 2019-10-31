@@ -1,15 +1,17 @@
 ---
-question: Please tick all that apply on your worst day
+question: Please tick all that apply. 
+subquestion: |
+  This section of the questionnaire will ask you about self-care.
 fields:
-  - no label: STGselfcare
+  - I usually or always...: STGselfcare
     datatype: checkboxes
     choices:
-      - Usually or always require assistance with showering.
-      - Usually or always require assistance with eating.
-      - Usually or always require assistance with dressing yourself.
-      - Usually or always require assistance with toileting.
-      - Usually or always require assistance with cleaning your teeth.
-      - Usually or always require assistance with looking after your own healthcare needs.
+      - Need help with showering
+      - Need help with eating
+      - Need help with dressing yourself
+      - Need help with toileting
+      - Need help with cleaning your teeth
+      - Need help with looking after your own healthcare needs
 ---
 code: |
   if STGselfcare:

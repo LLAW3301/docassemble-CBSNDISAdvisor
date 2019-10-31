@@ -1,12 +1,14 @@
 ---
-question: Please tick all that apply on your worst day
+question: Please tick all that apply. 
+subquestion: |
+  This section of the questionnaire will ask you about your learning skills.
 fields:
-  - no label: STGlearning
+  - I usually or always...: STGlearning
     datatype: checkboxes
     choices:
-      - Have trouble learning and remembering information.
-      - Find it hard to learn new things/skills.
-      - Have trouble using new skills.
+      - Have trouble learning and remembering information
+      - Find it hard to learn new things/skills
+      - Have trouble using new skills
 ---
 code: |
   if STGlearning:

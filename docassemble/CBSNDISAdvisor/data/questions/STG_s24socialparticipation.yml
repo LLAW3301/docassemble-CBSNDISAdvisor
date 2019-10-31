@@ -5,7 +5,8 @@ fields:
     datatype: checkboxes
     choices:
       - You have difficulty participating in sport.
-      - You have difficulty in performing voluntary work or travel.
+      - You have difficulty in performing voluntary work.
+      - You have difficulty travelling.
       - You have trouble engaging in social activities.
 ---
 code: |
