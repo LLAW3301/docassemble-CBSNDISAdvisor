@@ -12,12 +12,14 @@ subquestion: |
   
   Below is a list of the answers you have given for each series of questions.
   
-  Category|Your Answers
+   Category|Your Answers
   --------|--------
   Diagnosed?        | ${ STGdiagnosedautism }
+  %if STGdiagnosedautism:
   Level of Autism   | ${ STGlevelofautism }
   Medical Expert    | ${ STGmedicalexpert.true_values() if STGmedicalexpert.true_values() else 'Not Answered' }
-  Communication     | ${ STGcommunication.true_values() if STGcommunication.true_values() else 'Not Answered' }
+  %endif
+  Communication     | ${ STGcommunication.true_values() if STGcommunication.true_values() else 'Not Answered' }ered' }
   Social Interaction | ${ STGsocialinteraction.true_values() if STGsocialinteraction.true_values() else 'Not Answered' }
   Learning          | ${ STGlearning.true_values() if STGlearning.true_values() else 'Not Answered' }
   Mobility          | ${ STGmobility.true_values() if STGmobility.true_values() else 'Not Answered' }
@@ -38,12 +40,12 @@ subquestion: |
 attachment:
   - name: Your Answers
     filename: Your Answers
-    docx template file: Consolidated_answers_document.docx
+    docx template file: Your_Answers.docx
     valid formats:
       - pdf
   - name: Next Steps and Planning Meeting Tips
-    filename: Next Steps and Planner Meeting Tips
-    docx template file: Next_Steps_and_Planner_Meeting_Tips.docx
+    filename: Next Steps and Planning Meeting Tips
+    docx template file: Next_Steps_and_Planning_Meeting_Tips.docx
     valid formats:
       - pdf
 ---

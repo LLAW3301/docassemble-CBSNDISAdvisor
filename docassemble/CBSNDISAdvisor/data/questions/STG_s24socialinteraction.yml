@@ -1,5 +1,8 @@
 ---
-question: Please tick all that apply.
+question: Please tick all that apply. 
+subquestion: |
+  This section of the questionnaire will ask you about your social interaction
+  skills.
 fields:
   - I usually or always...: STGsocialinteraction
     datatype: checkboxes

@@ -1,5 +1,8 @@
 ---
-question: Please tick all that apply.
+question: Please tick all that apply. 
+subquestion: |
+  This section of the questionnaire will ask you about your social and economic
+  participation ability.
 fields:
   - I usually or always...: STGsocialandeconomicparticipation
     datatype: checkboxes
@@ -8,7 +11,7 @@ fields:
       - Have difficulty in performing voluntary work
       - Have difficulty travelling
       - Have trouble engaging in social activities (e.g. going to the movies)
-      - Have trouble keeping a job
+      - Have trouble keeping any form of employment
 ---
 code: |
   if STGsocialandeconomicparticipation:
