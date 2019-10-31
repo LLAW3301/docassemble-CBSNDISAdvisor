@@ -107,7 +107,7 @@ code: |
     endpoint['ineligibleduetoresidency']
   elif ( STGpotentialautism_ok == False ):
     endpoint['noautism']
-  elif (( STGdiagnosedautism or STGcommunication_checkboxes or STGlearning_checkboxes or STGmobility_checkboxes or STGsocialinteraction_checkboxes or STGselfcare_checkboxes or STGselfmanagement_checkboxes) and 
+  elif (( STGdiagnosedautism or STGcommunication_checkboxes or STGlearning_checkboxes or STGmobility_checkboxes or STGsocialinteraction_checkboxes or STGselfcare_checkboxes or STGselfmanagement_checkboxes ) and 
        (STGsocialandeconomicparticipation_checkboxes)):
     endpoint['eligible']
   else:
