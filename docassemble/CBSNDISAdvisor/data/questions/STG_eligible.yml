@@ -16,28 +16,34 @@ subquestion: |
     - Mobility
     - Self-care
     - Self-management
+    
+  Your answers are below:
   
-  According to **section 24** the [*National Disability Insurance Scheme Act 2013* (Cth)](https://www.legislation.gov.au/Details/C2013A00020)
-  your level of impairment may mean you are eligible.
-  
-  **This means you may not be eligible to access the NDIS.**
-  
-  Below is a list of the answers you have given for each series of questions.
-  
-   Category|Your Answers
+  Category|Your Answers
   --------|--------
   Diagnosed?        | ${ STGdiagnosedautism }
   %if STGdiagnosedautism:
   Level of Autism   | ${ STGlevelofautism }
   Medical Expert    | ${ STGmedicalexpert.true_values() if STGmedicalexpert.true_values() else 'Not Answered' }
   %endif
-  Communication     | ${ STGcommunication.true_values() if STGcommunication.true_values() else 'Not Answered' }ered' }
+  Communication     | ${ STGcommunication.true_values() if STGcommunication.true_values() else 'Not Answered' }
   Social Interaction | ${ STGsocialinteraction.true_values() if STGsocialinteraction.true_values() else 'Not Answered' }
   Learning          | ${ STGlearning.true_values() if STGlearning.true_values() else 'Not Answered' }
   Mobility          | ${ STGmobility.true_values() if STGmobility.true_values() else 'Not Answered' }
   Self-Care         | ${ STGselfcare.true_values() if STGselfcare.true_values() else 'Not Answered' }
   Self-Management   | ${ STGselfmanagement.true_values() if STGselfmanagement.true_values() else 'Not Answered' }
+  
+  Your autism spectrum disorder **must** also cause you a very high level 
+  of impairment in either economic or social participation.
+  
+  Your answers are below:
+  
+  Category|Your Answers
+  --------|--------
   Social and Economic Participation   | ${ STGsocialandeconomicparticipation.true_values() if STGsocialandeconomicparticipation.true_values() else 'Not Answered' }
+  
+  According to **section 24** of the [*National Disability Insurance Scheme Act 2013* (Cth)](https://www.legislation.gov.au/Details/C2013A00020)
+  your level of impairment may mean you are eligible.
   
   You can apply to the National Disability Insurance Agency (NDIA) in order to get
   support. You can do this by calling the NDIA on 1800 800 119.
@@ -47,7 +53,7 @@ subquestion: |
   should be prepared for this.
   
   **Download the 'Next Steps and Planning Meeting Tips' document for more information
-  on how to apply for the NDIS or [click here for more information](https://www.ndis.gov.au/applying-access-ndis/how-apply).**
+  on how to apply for the NDIS or click [here](https://www.ndis.gov.au/applying-access-ndis/how-apply) for more information.**
   
 attachment:
   - name: Your Answers

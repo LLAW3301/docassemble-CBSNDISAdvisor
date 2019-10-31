@@ -41,37 +41,55 @@ metadata:
 objects:
   - CBSLogo: DAStaticFile.using(filename='CBS-logo-small-white.png')
 ---
+mandatory: True
+code: |
+  STGmetadata = all_variables(special='metadata')
+  
+  STGlogostring = '<div class="media"><img src="'
+  
+  STGlogostring += CBSLogo.url_for()
+ 
+  STGlogostring += '" class="mr-3" height="80">'
+  STGlogostring += '<div class="media-body">'
+  STGlogostring += '<h5 class="mt-0">&nbsp; <b>' + STGmetadata['title'] + '</b></h5>'
+  STGlogostring += '</div></div>'
+  
+  set_parts(logo=STGlogostring)
+---
 features:
   css: CBSInc.css
-  debug: True
-  hide standard menu: False
+  debug: false
+  hide standard menu: false
 ---
 # Welcome screen should go here
 mandatory: True
 question: |
-  NDIS Advisor Questionnaire
+  CBS Inc. NDIS Advisor
 subquestion: |
-  Welcome to our NDIS Eligibility Questionnaire!
+  Welcome to our NDIS Advisor!
   
-  The purpose of this questionnaire is to decide whether you are likely eligible
+  The purpose of this application is to decide whether you are likely eligible
   for the National Disability Insurance Scheme (NDIS) and to give you tips for the
   next steps in applying.
   
-  **This questionnaire currently only applies for people with autism spectrum disorder.**
+  **This application currently only applies for people with autism spectrum disorder.**
   
     ***Disclaimer***  
   
-    This questionnaire is **not** legal advice. 
+    This application is **not** legal advice. 
   
     Please answer all questions honestly.
     
-    This questionnaire does not guarantee you will receive funding from the NDIS. 
+    This application does not guarantee you will receive funding from the NDIS. 
     It will help you assess whether you are likely eligible and give you tips
     on the next steps.
     
     **The NDIA will make the final decision.**
     
-    *We advise you to have a support person while filling out the questionnaire.*
+    *We advise you to have a support person while filling out the questions.*
+    
+    *If you are under 18, you must have a parent or caregiver present while
+    filling out the questions.*
 
   If you continue, you accept these terms.
 buttons:
