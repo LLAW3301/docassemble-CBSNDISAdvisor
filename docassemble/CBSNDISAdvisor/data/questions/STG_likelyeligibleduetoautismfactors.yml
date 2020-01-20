@@ -1,6 +1,5 @@
 ---
-event: endpoint['likelyeligibleduetoautismfactors']
-question: You are likely eligible
+question: You are likely eligible.
 subquestion: |
   **It is likely you are eligible for the NDIS as your level of autism 
   likely satisfies the NDIS disability requirements.**

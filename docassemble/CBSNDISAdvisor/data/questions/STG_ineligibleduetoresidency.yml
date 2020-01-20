@@ -1,0 +1,34 @@
+---
+event: endpoint['ineligibleduetoresidency']
+question: Unfortunately, you may not be eligible for the NDIS.
+subquestion: |
+
+  To access the NDIS you must live in Australia and:
+  
+    - Be an Australian citizen; or
+    - A permanent visa holder; or
+    - A special category visa holder.
+  
+  Your answers are below:
+  
+    - Are you an Australian resident? **${ STGaustralianresident }**
+    - Are you an Australian citizen? **${ STGcitizen }**
+    - Are you a permanent visa holder? **${ STGpermanentvisa }**
+    - Are you a special category visa holder? **${ STGspecialvisa }**
+  
+  According to **section 23** of the [*National Disability Insurance Scheme Act 2013* (Cth)](https://www.legislation.gov.au/Details/C2013A00020) 
+  your answers indicate that you do not meet this requirement.
+  
+  **This means you may not be eligible to access the NDIS.**
+  
+  The National Disability Insurance Agency (NDIA) makes the final decision
+  about who gets to receive support under the NDIS. If you would still like to 
+  check if you are eligible you should contact them to discuss your eligibility.
+  You can do this by calling them on 1800 800 119.
+  
+  Thank you for using the NDIS Advisor.
+buttons:
+  - Exit: exit
+    url: https://communitybridgingservices.org.au/
+  - Restart: restart
+---

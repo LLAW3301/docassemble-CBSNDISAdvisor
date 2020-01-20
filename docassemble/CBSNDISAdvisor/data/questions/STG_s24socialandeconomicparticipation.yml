@@ -1,0 +1,27 @@
+---
+question: Please tick all that apply. 
+subquestion: |
+  This section of the questionnaire will ask you about your social and economic
+  participation ability.
+fields:
+  - I usually or always...: STGsocialandeconomicparticipation
+    datatype: checkboxes
+    choices:
+      - Have difficulty participating in sport
+      - Have difficulty in performing voluntary work
+      - Have difficulty travelling
+      - Have trouble engaging in social activities (e.g. going to the movies)
+      - Have trouble keeping any form of employment
+---
+code: |
+  if STGsocialandeconomicparticipation:
+    STGsocialandeconomicparticipation = True
+  else:
+    STGsocialandeconomicparticipation = False
+---
+code: |
+  if STGsocialandeconomicparticipation.any_true():
+    STGsocialandeconomicparticipation_checkboxes = True
+  else:
+    STGsocialandeconomicparticipation_checkboxes = False
+---

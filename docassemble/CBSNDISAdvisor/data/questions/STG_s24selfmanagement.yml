@@ -1,13 +1,15 @@
 ---
-question: Please tick all that apply on your worst day
+question: Please tick all that apply. 
+subquestion: |
+  This section of the questionnaire will ask you about your self-management ability.
 fields:
-  - no label: STGselfmanagement
+  - I usually or always...: STGselfmanagement
     datatype: checkboxes
     choices:
-      - Have difficulty completing daily tasks.
-      - Have difficulty making decisions.
-      - Have difficulty problem solving.
-      - Have difficulty managing finances.
+      - Have difficulty completing daily tasks
+      - Have difficulty making decisions
+      - Have difficulty problem solving
+      - Have difficulty managing finances
 ---
 code: |
   if STGselfmanagement:
