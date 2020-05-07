@@ -1,0 +1,13 @@
+---
+question: Write about your disability or {developmental delay}. 
+subquestion: |
+  Also write about how your disability or developmental delay affects your life. 
+fields:
+  - no label: ASAdisability 
+    datatype: text 
+terms: 
+  developmental delay: |
+    Developmental delay means a person finds it hard to do everyday things. For example, have a conversation. 
+--- 
+
+

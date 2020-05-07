@@ -1,0 +1,21 @@
+---
+question: Write about important people in your life who do not work in disability services. Write about your family and friends. 
+fields: 
+  - no label: ASAperson
+    choices: 
+    - Mother
+    - Father
+    - Brother
+    - Sister
+    - Friend
+    - Other Family Member
+    - Other
+subquestion: |
+   Write about your {ASAperson} here. 
+fields: 
+  - no label: ASApersondescriptor
+    input type: area 
+    
+## know the format of the subquestion above isn't correct, have just put that there for now. 
+## Also, how to correctly format asking multiple of this question type? 
+---
