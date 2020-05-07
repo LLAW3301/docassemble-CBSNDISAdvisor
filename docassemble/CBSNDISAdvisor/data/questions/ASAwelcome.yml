@@ -1,0 +1,28 @@
+----
+#This is the welcome screen
+mandatory: True
+question: |
+  Preparing for NDIS Planning Meeting with CBS Inc. 
+subquestion: |
+ This program will help you get ready for your NDIS planning meeting. 
+  
+  *This applicati is only for use by people with intellectual disabilities.*  
+  
+  **We advise that you have a support worker with you while using the application. If you are under 18 you must have a support worker or family member with you.**
+  
+  ***Disclaimer***
+  
+  This program is **not** legal advice. 
+  
+  Answer all questions honestly. 
+  
+  This program does not guarantee that you will receive funding from the NDIS. It will help you prepare for the planning meeting. This includes gathering necessary information for the meeting and providing guidance on the process. 
+  
+  **The NDIA will make the final decision.**
+  
+  Do you accept these terms?
+buttons: 
+  -Yes: continue
+  -No: exit 
+   url: https: communitybridgingservices.org.au
+---

@@ -1,0 +1,35 @@
+# This is the eligible endpoint. Don't think that a table will be the best way to store all the data collected. For small personal details yes, but may be best to just display the rest in paragraph/list form. Othersiwe formatting of table may get a bit funky. 
+event: endpoint['eligible']
+question: COMPLETED
+subquestion: |
+  ### BOOKLET 2- PREPARING FOR PLANNING MEETING
+  
+  Thank you for providing the relevant information for your NDIS Planning Meeting.  We have collected this data from you. Please confirm that this is correct. 
+
+  Information|Your Input
+  -----------|----------
+  Name               | ${ ASAfirstname } ${ ASAlastname } 
+  NDIS number        | ${ ASAndisnumber } 
+  Age                | ${ ASAage } 
+  Disability Impact  | ${ ASAdisability }
+  Important People   | ${ ASAperson } 
+ 
+  Service address       | ${ AGMstreetnumber } ${ AGMstreetname } ${AGMstreettype}, ${ AGMsuburb}, ${ AGMstate } ${ AGMpostcode } 
+  Contact numbers       | H: ${ AGMhome }, M: ${ AGMmobile }, F: ${ AGMfax } 
+  DX system used?       | ${ AGMhasdx } 
+  % if AGMhasdx == 'Yes':
+  DX Mail number        | ${ AGMdxnumber }
+  % endif
+  Email                 | ${ AGMemail } 
+  Codes                 | ${ AGMlcode }, ${ AGMpcode } 
+  
+  
+attachment: 
+  docx template file: Booklet_2.docx
+  valid formats: 
+    - pdf
+buttons:
+  - Edit: restart
+  - Done: exit
+    url: http://www.communitybridgingservices.org.au
+---
